@@ -1,0 +1,14 @@
+{
+  "ver": "4.0.23",
+  "importer": "typescript",
+  "imported": true,
+<<<<<<< HEAD:assets/Scripts/MyCoroutine.ts.meta
+  "uuid": "5ca6e1ce-d921-49c8-9f4b-46affc1a7239",
+=======
+  "uuid": "d2e219cd-b326-4e2a-aa4c-41e315e81ff4",
+>>>>>>> heads/head2:assets/Scripts/MyCoroutine1.ts.meta
+  "files": [],
+  "subMetas": {},
+  "userData": {}
+  
+}
