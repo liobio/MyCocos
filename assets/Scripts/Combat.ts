@@ -70,20 +70,8 @@ export class Combat extends Component {
             await null;
         }
     }
-<<<<<<< HEAD
 
 
-    // TimeAdd(): Promise<void> {
-    //     return new Promise<void>((resolve, reject) => {
-    //         while (this.intervalTime <= this.comboTimeLimit) {
-    //             this.intervalTime += this.deltaTime;
-    //         }
-    //     });
-    // }
-
-=======
-    ////dev  fix 协程3
->>>>>>> dev
 }
 
 
