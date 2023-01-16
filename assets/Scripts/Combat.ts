@@ -33,6 +33,9 @@ export class Combat extends Component {
         this.deltaTime = deltaTime;
 
     }
+    lateUpdate(deltaTime: number) {
+
+    }
     onKeyDown(event: EventKeyboard) {
         switch (event.keyCode) {
             case KeyCode.SPACE:
@@ -56,18 +59,31 @@ export class Combat extends Component {
     async ComboTimer() {
 
         this.intervalTime = 0;
-        await this.TimeAdd();
+        await this.Timeadd();
+        console.log("while over");
         this.isComboTime = false;
         this.comboText.node.active = false;
     }
-    TimeAdd(): Promise<void> {
-        return new Promise<void>((resolve, reject) => {
-            while (this.intervalTime <= this.comboTimeLimit) {
-                this.intervalTime += this.deltaTime;
-            }
-        });
+    async Timeadd() {
+        while (this.intervalTime <= this.comboTimeLimit) {
+            this.intervalTime += this.deltaTime;
+            await null;
+        }
     }
+<<<<<<< HEAD
 
+
+    // TimeAdd(): Promise<void> {
+    //     return new Promise<void>((resolve, reject) => {
+    //         while (this.intervalTime <= this.comboTimeLimit) {
+    //             this.intervalTime += this.deltaTime;
+    //         }
+    //     });
+    // }
+
+=======
+    ////dev  fix 协程3
+>>>>>>> dev
 }
 
 

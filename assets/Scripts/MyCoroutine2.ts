@@ -1,8 +1,8 @@
 import { _decorator, Component, Node } from 'cc';
 const { ccclass, property } = _decorator;
 
-@ccclass('MyCoroutine1')
-export class MyCoroutine1 extends Component {
+@ccclass('MyCoroutine2')
+export class MyCoroutine2 extends Component {
     start() {
 
     }
