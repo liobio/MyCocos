@@ -1,13 +1,39 @@
-import { _decorator, Component, Node } from 'cc';
+import { _decorator, Component, Node, Label, Input, input, EventKeyboard, KeyCode } from 'cc';
 const { ccclass, property } = _decorator;
 
 @ccclass('MyCoroutine')
 export class MyCoroutine extends Component {
-    start() {
-        this.Main();
+
+
+    @property
+    isComboTime: boolean = false;
+    @property
+    intervalTime: number = 0;
+    @property
+    comboTimeLimit: number = 2;
+    @property
+    currentComboCount: number = 0;
+    @property(Label)
+    comboText: Label;
+    time: number = 0;
+
+    onLoad() {
+        input.on(Input.EventType.KEY_DOWN, this.onKeyDown, this);
+    }
+    onDestroy() {
+        input.off(Input.EventType.KEY_DOWN, this.onKeyDown, this);
     }
 
-    time: number = 0;
+    onKeyDown(event: EventKeyboard) {
+        switch (event.keyCode) {
+            case KeyCode.SPACE:
+                console.log('Press a key');
+                this.comboText.node.active = true;
+                this.Main();
+                break;
+        }
+    }
+
     update(deltaTime: number) {
         this.time += deltaTime;
     }
@@ -33,63 +59,9 @@ export class MyCoroutine extends Component {
             console.log(this.time);
             i++;
         }
-
         console.log("Over");
 
-
     }
-    //     using System.Collections;
-    // using UnityEngine;
-    // using UnityEngine.UI;
-
-    //     public class ComboController: MonoBehaviour
-    // {
-    //     public Text comboText;
-    //     public bool isComboTime;
-    //     public float intervalTime;
-    //     public float comboTimeLimit;
-    //     public int currentComboCount;
-
-    //     void Start()
-    //     {
-
-    //     }
-
-    //     // Update is called once per frame
-    //     void Update()
-    //     {
-    //         if (Input.GetKeyDown(KeyCode.Space)) {
-
-    //             StartCombo();
-    //             comboText.gameObject.SetActive(true);
-    //         }
-    //     }
-    //     public void StartCombo()
-    //     {
-    //         if (isComboTime) {
-    //             intervalTime = 0f;
-    //         }
-    //         else {
-    //             currentComboCount = 0;
-    //             StartCoroutine(ComboTimer());
-    //         }
-    //         currentComboCount++;
-    //         comboText.text = currentComboCount.ToString() + " COMBO";
-    //     }
-    //     IEnumerator ComboTimer()
-    //     {
-    //         isComboTime = true;
-    //         intervalTime = 0;
-    //         while (intervalTime <= comboTimeLimit) {
-    //             intervalTime += Time.deltaTime;
-    //             yield return null;
-    //         }
-    //         isComboTime = false;
-    //         comboText.gameObject.SetActive(false);
-    //     }
-
-    // }
-
 
 }
 
