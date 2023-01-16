@@ -70,6 +70,7 @@ export class Combat extends Component {
             await null;
         }
     }
+<<<<<<< HEAD
 
 
     // TimeAdd(): Promise<void> {
@@ -80,6 +81,9 @@ export class Combat extends Component {
     //     });
     // }
 
+=======
+    ////dev  fix 协程3
+>>>>>>> dev
 }
 
 
