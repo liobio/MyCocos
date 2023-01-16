@@ -2,7 +2,11 @@
   "ver": "4.0.23",
   "importer": "typescript",
   "imported": true,
+<<<<<<< HEAD:assets/Scripts/MyCoroutine.ts.meta
   "uuid": "a48fcf00-ede3-49df-a5bb-b859b97721b8",
+=======
+  "uuid": "d2e219cd-b326-4e2a-aa4c-41e315e81ff4",
+>>>>>>> 3e2c60f (fix new  协程2):assets/Scripts/MyCoroutine1.ts.meta
   "files": [],
   "subMetas": {},
   "userData": {}
