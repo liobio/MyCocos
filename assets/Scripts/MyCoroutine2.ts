@@ -8,7 +8,8 @@ export class MyCoroutine2 extends Component {
     }
 
     update(deltaTime: number) {
-        
+
     }
 }
-
+
+
