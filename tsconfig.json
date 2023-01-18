@@ -6,8 +6,4 @@
   "compilerOptions": {
     "strict": false
   },
-
-  "paths": {
-		"Utils/*": ["../src/utils/*"], // 根据ts配置项设置path属性可以自定义引入的路径
-	},
 }

@@ -1,5 +1,6 @@
 
 import { _decorator, Component, Texture2D, Node, Rect, UITransform } from 'cc';
+import List from '../src/Utils/List';
 
 const { ccclass, property } = _decorator;
 
@@ -33,9 +34,9 @@ export class UIPolygon extends Component {
         }
     }
 
-    // DrawPolygon(datas: List<number>) {
+    DrawPolygon(datas: List<number>) {
 
-    // }
+    }
 
 
 }
