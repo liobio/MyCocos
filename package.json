@@ -6,6 +6,7 @@
     "version": "3.6.3"
   },
   "dependencies": {
+    "install": "^0.13.0",
     "liobio_libs": "^1.1.2"
   }
 }
